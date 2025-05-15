@@ -1,0 +1,18 @@
+Synchronization:
+Unconditional: thread.sleep - java method or class look it up
+Conditional:
+
+Wait in Selenium:
+Implicit:
+Explicit: WebDriver (also called just Explicit Wait)
+		  Fluent Wait
+		  
+PageLoadTimeOut - will wait until the page is fully loaded. Applicable only for page and used for commands .get() and .navigate();
+
+Implicit Wait - will tell the driver to wait until specified time before its throws NoSuchElementException.
+Works with .findElement and .findElements
+
+It implicitly wait for every element in your program. If element is found within 2 seconds -> rest of the time will be ignored
+if not found program will wait specified amount of time and ONLY then will throw NoSuchElementException.
+
+

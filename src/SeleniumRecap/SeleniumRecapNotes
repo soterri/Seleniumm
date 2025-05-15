@@ -1,0 +1,179 @@
+What is Selenium?
+An automation tool to automate web based applications across different browsers and platforms.
+
+Using Selenium 3.14
+
+What do we do before we start automating?
+First, start manual testing. Create a test case passes manually. If it fails manually than you will reproduce it and than report the bug.
+
+System.setProperty("webdriver.chrome.driver", "path to the driver");
+WebDriver driver = new ChromeDriver(); 
+
+Commands to performs on browsers/page
+get(String url); completes until page is loaded
+.navigate(); gives us history to go back and forth
+		.back();
+		.forward();
+		.refresh();
+.close(); closes the current page
+.quit(); closes all the browsers that has been opened by instance of driver
+getTitle();
+manage.window.maximize();
+
+WEB ELEMENTS: textbox, radio buttons, checkBoxes, links, drop down list, images, frames
+
+How to interact with WebElements?
+to interact with WebElements,  we would first to need to locate them.
+
+How are elements written in the DOM? 
+it always starts with tagName, followed by attribute and appropriate value
+<tagName attribute="value">
+ex: <div, frame, input, button, a, select> every element has to be unique to be easily identified
+
+Locators: 8
+name
+ID
+tagName
+className
+xPath
+CSS Selector
+linkText
+partialLinkText
+
+why 8? bc developers might not provide that attribute to identify the element so we would have to use another locator
+
+ex: <human name="John", lastName="Smith">Good Tester</human>
+<human name="John", lastName="Smith">Good Developer</human>
+finding the element by xpath if there are duplicates 
+
+//human[text()='Good Developer'] 
+
+Types of xPath?
+1. Absolute - starts at the root node, uses only a single slash and can only go forward not backwards
+2. Relative - can start from anywhere in the DOM, uses double slash
+
+
+using INPUT - can create radio buttons, check boxes, - getting input from the user
+
+Lets create a button with type=button and value=login
+<button type="submit", value=login> </button>
+
+xPath 
+//button[@value='login']
+
+css
+button[value='login]
+
+<button type="submit", value"login123"></button>
+/xPath
+//button[starts-with(@value, 'login')]
+//button[contains[@value, 'login')]
+
+css
+button[value^='login']
+button[value*='login']
+button[value$='123'] ends with
+
+Why use FUNCTIONS?
+if the code changes dynamically.. esp with numbers
+if the value of the elements contains any numbers
+
+
+Commands to perform on WebElements
+.getText();
+.sendKeys(String key); - to send a text 
+.getAttribute(); - to get the value of the attribute
+.isEnabled();
+.isSelected();
+.isDisplayed();
+.click();
+
+FindElememts();
+this method will return a list of WebElements
+
+
+Handle RadioButtons and CheckBoxes 
+If just one radiobutton or checkbox - just CLICK
+
+If GROUP of radiobuttons or checkboxes - collect in a list by using common attribute
+and then loop through each element
+
+Handle DROP DOWNS
+Use SELECT class only if element is written using select tag.
+
+Select obj = new Select(must be an obj of select type); otherwise you will get an exception
+
+select by visibleText
+select by valueAttribute
+select by index
+
+TEXTBOX:
+first clear and than sendText();
+
+ALERTS:
+Types of Alerts
+Web based/Java Script Alerts
+
+Selenium is a automation tool that can handle when it comes to the windows popup
+
+We have an alert interface. Selenium provides us with an interface to help us handle the alerts. 
+
+Type Of Alerts?
+Alert Box - accept
+Confirm Box - select yes or no
+Prompt Box - send text
+
+Alert alert = driver.switchTo().alert();
+gives us one alert obj... this obj is of alert type
+once we have obj of alert type this obj has access to all methods that are within the alert interface
+
+there are 4 methods
+dismiss();
+accept();
+sendText();
+getText();
+
+
+Handle FRAMES
+
+We need to switch into a frame where element is located!
+driver.switchTo().frame(WebElement);
+driver.switchTo().frame(name or ID);
+driver.switchTo().frame(index); should be the last option
+
+
+Logic of getting text from 3 different frames
+1. switch to frame
+2. perform action inside the frame
+3. switch to default content
+4. switch to frame 2
+5. perform action inside the frame 2
+6. switch to default content
+7. perform action on the main page
+
+How to handle frames IQ:
+
+"First I will have to identify the frame, once I identify the frame, I will have to switch to the frame by its name or ID, if the name or ID 
+is not provided, I will identify, store it inside web element and switch it perform what ever action i need and i will have to switch it
+to default content"
+
+How to switch to the main content:
+driver.switchTo().defaultContent();
+
+Handle Multiple Windows:
+
+getWindowHandles(); - gets set of windows ID sessions
+getWindowHandle() - gets 1 window ID session
+
+Logic to handle windows:
+1. identify parent ID
+2. collect all window handles - getWindowHandles();
+3. iterate through each ID 
+		if(!id.equals(parentID)){
+		driver.switchTo().window(id);
+		driver.getTitle();
+		driver.close();
+		driver.switchTo().window(parent);
+		
+
+ 

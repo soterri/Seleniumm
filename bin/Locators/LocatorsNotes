@@ -1,0 +1,51 @@
+Relative Xpath is preferred bc you can directly go to the one tag and identify it from there. its unique and narrowed down.
+
+Issue with Absolute xpath is: a developers adds or removes, then that xpath will break
+
+Difference b/w absolute and relative xpath
+
+1.Absolute xpath starts with 1 slash while Relative starts with 2 // slashes
+
+2.Absolute - starts at root node starting from the top note (html) while relative xpath you can start from anywhere in the DOM.
+
+3.Absolute xpath - you can only go forward while relative xpath you can go up and down the elements
+ 
+Why not use absolute xpath - bc we have to start with the root node and lets say im traversing through the element 20 and in the middle element 
+15 is removed my xpath will be broken it will not work.
+
+xPath functions:
+CONTAINS -> //tagName[contains(@class, 'login_whatever')]
+
+STARTS-WITH -> //tagName[starts-with(@class, 'login')]
+
+ENDS-WITH -> //tagName[ends-with(@class, 'login')]
+
+cssSelector Syntax:
+tagName[attribute='value']
+(input[id='Login'])(input[class='login'])
+
+shorter way
+id --> tagName#idValue (ex: input#login)
+class --> tagName.classValue (ex: input.login)
+
+CSS FUNCTIONS
+contains -> tagName[attribute*='value]
+
+starts with -> tagName[attribute^='startValue]
+
+ends with -> tagName[attribute$="endValue']
+
+--------------------
+Commands for a browser
+.get(String URL)
+.navigate.to(String URL)
+forwards();
+back();
+refresh();
+quit();
+close();
+maximize();
+
+for Page:
+getTitle();
+getURL();
