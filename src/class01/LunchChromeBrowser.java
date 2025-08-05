@@ -11,6 +11,7 @@ public class LunchChromeBrowser {
 		// System is a class.  SetProperty(); is a static method
 		//how do you know if its static? bc its italic and we didnt create an obj from class name
 		//					Key							Value
+		//WebDriver is an interface DRIVER is an obj reference
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		
@@ -25,7 +26,7 @@ public class LunchChromeBrowser {
 		driver.navigate().to("http://www.syntaxtechs.com");
 		//it will navigate back
 		driver.navigate().back();
-		//navigate forword
+		//navigate forward
 		driver.navigate().forward();
 		
 		String actualTitle=driver.getTitle();

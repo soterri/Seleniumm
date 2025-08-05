@@ -1,5 +1,5 @@
 What is Selenium?
-An automation tool to automate web based applications across different browsers and platforms.
+A suite of tools. An open source, automation tool to automate web based applications across different browsers and platforms.
 
 Using Selenium 3.14
 
@@ -10,14 +10,15 @@ System.setProperty("webdriver.chrome.driver", "path to the driver");
 WebDriver driver = new ChromeDriver(); 
 
 Commands to performs on browsers/page
-get(String url); completes until page is loaded
-.navigate(); gives us history to go back and forth
+get(String url); completes until page is loaded and will not keep the history of the browser
+.navigate(); gives us history to go back and forth and will not wait for the page to load
 		.back();
 		.forward();
 		.refresh();
 .close(); closes the current page
 .quit(); closes all the browsers that has been opened by instance of driver
 getTitle();
+getCurrentUrl();
 manage.window.maximize();
 
 WEB ELEMENTS: textbox, radio buttons, checkBoxes, links, drop down list, images, frames
@@ -177,3 +178,39 @@ Logic to handle windows:
 		
 
  
+What is software testing?
+It's a process to identify the correctness, completeness, and quality of a 
+developed computer software. It includes a set of activities conducted with
+the intent of finding errors so it can be corrected before the product is released
+to the end user.
+
+How to find errors?
+Manual testing and automation testing.
+
+When do you go for Test Automation?
+1. When the environment is stable
+2. When manual test passes
+3. Analyzing test cases and identifying the best suite for automation.
+
+What tool to use for test automation?
+Selenium WebDriver, Katalon Stidue, UFT/QT
+
+Levels Of Software Testing.
+1. Unit testing done by developers
+2. Integration Testing
+3. System Testing
+4. UAT Testing
+
+Types of Software Testing
+1. Functional Testing
+
+
+
+2. Non Functional Testing
+ a. performance testing - load testing, stress testing
+ 	Tools used: jMeter, WebLoad, Stress Stimulus, etc
+ b. Security testing
+ 	Tools Used: Arachni, Iron-Wasp, Graber
+ 
+
+Document Object Model (DOM): 
