@@ -5,16 +5,42 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class XpathDemo {
-	public static void main(String[] args) {
-		
+	
+	  public static String url = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login";
 
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		
-		driver.get("http://166.62.36.207/Syntax_HRM/symfony/web/index.php/auth/login");
-		//relative xpath
-		driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Admin");
-		
+	    public static void main(String[] args) throws InterruptedException {
+
+	        // Set path to ChromeDriver
+	        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+
+	        // Create WebDriver instance
+	        WebDriver driver = new ChromeDriver();
+
+	        // Maximize browser window (optional)
+	        driver.manage().window().maximize();
+
+	        // Open the URL
+	        driver.get(url);
+
+	        // Wait for page to load completely (better to use WebDriverWait, using sleep here for simplicity)
+	        Thread.sleep(2000);
+
+	        // Enter username
+	        driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
+
+	        // Enter password
+	        driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
+
+	        // Click the Login button
+	        driver.findElement(By.xpath("//button[@type='submit']")).click();
+
+	        // Optional: wait to observe the login
+	        Thread.sleep(3000);
+
+	        // Close the browser
+	        driver.quit();
+	    }
+	}
 				//input[@type='text']
 				//form[starts-with(@action,'/humanresource')]
 				//h1[text()='A place where knowledge becomes a creer']
@@ -23,5 +49,4 @@ public class XpathDemo {
 				//input[@type='hidden' or @name='actionID']
 	
 
-	}
-}
+	

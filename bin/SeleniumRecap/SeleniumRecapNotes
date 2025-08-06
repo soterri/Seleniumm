@@ -31,6 +31,9 @@ it always starts with tagName, followed by attribute and appropriate value
 <tagName attribute="value">
 ex: <div, frame, input, button, a, select> every element has to be unique to be easily identified
 
+What's an attribute?
+It's a key value pair that provides additional info about the HTML element.
+
 Locators: 8
 name
 ID
