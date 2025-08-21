@@ -10,8 +10,8 @@ Difference b/w absolute and relative xpath
 
 3.Absolute xpath - you can only go forward while relative xpath you can go up and down the elements
  
-Why not use absolute xpath - bc we have to start with the root node and lets say im traversing through the element 20 and in the middle element 
-15 is removed my xpath will be broken it will not work.
+Why not use absolute xpath - bc we have to start with the root node and lets say im traversing through the element 20 and in 
+the middle element 15 is removed my xpath will be broken it will not work.
 
 xPath functions:
 CONTAINS -> //tagName[contains(@class, 'login_whatever')]
@@ -49,3 +49,25 @@ maximize();
 for Page:
 getTitle();
 getURL();
+
+How did I use my static variables?
+I used my static variables in my CONSTANTS class, I stored the my path to my configuration file, storing path to test data file
+path to my chrome and gecko driver
+
+final is a kw that can be used with variables, methods, and classes
+ex: using in my framework, using final with variables to hold the value that should be constant through the entire project
+
+inside constants class, I have variables and those values are constant and not changing
+
+Configs Reader is reading my property files
+a property file is a file being handled by different methods and different classes
+
+How did I use property file?
+using in my framework, using to store my test configurations
+what kind of property did I store? url, browser, username, password
+and then i developed functions to read property files and to retrieve any values feom property file
+
+A BASE class, inside we have functions to initialize our webdriver and to quit our webdriver
+
+the purpose of Common Methods, to develop reusable functions to deal with my web browser
+any function. methods, actions. on the web browser will be stored inside the CommonMethods

@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class OHRMLoginUsingXpath {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 		/*
 		 * TEST CASE: navigate to
@@ -18,11 +18,11 @@ public class OHRMLoginUsingXpath {
 		WebDriver driver = new ChromeDriver();
 		
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-		
+		Thread.sleep(3000);
 		driver.findElement(By.xpath("//input[@placeholder='Username']")).sendKeys("Admin");
-		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("Admin123");
+		driver.findElement(By.xpath("//input[@type='password']")).sendKeys("admin123");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
-		
+		Thread.sleep(3000);
 		//click on PIM and add employee
 		//LINK ALWAYS STARTS WITH <a (anchor)
 		driver.findElement(By.xpath("//a[@id='menu_pim_viewPimModule']")).click();

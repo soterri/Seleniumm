@@ -1,0 +1,14 @@
+How do you automate drop down in selenium in webdriver?
+
+In Selenium webdriver provides a class known as select class
+using that class it provides differnet methods
+using those methods
+we can select a value from a drop down 
+using index, value, visible text
+using these 3 diff ways, we can select a value from a DD
+you can use only if tag name starts with select tag
+if its starts with other tag such as input, button than
+select class will not work
+
+getOptions method
+getText

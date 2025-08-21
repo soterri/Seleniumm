@@ -4,7 +4,8 @@ A suite of tools. An open source, automation tool to automate web based applicat
 Using Selenium 3.14
 
 What do we do before we start automating?
-First, start manual testing. Create a test case passes manually. If it fails manually than you will reproduce it and than report the bug.
+First, start manual testing. Create a test case passes manually. If it fails manually than you will reproduce it 
+and than report the bug.
 
 System.setProperty("webdriver.chrome.driver", "path to the driver");
 WebDriver driver = new ChromeDriver(); 
@@ -66,7 +67,7 @@ xPath
 //button[@value='login']
 
 css
-button[value='login]
+button[value='login']
 
 <button type="submit", value"login123"></button>
 /xPath
@@ -91,6 +92,10 @@ Commands to perform on WebElements
 .isSelected();
 .isDisplayed();
 .click();
+.findElement();
+.findElements();
+.submit();
+.clear();
 
 FindElememts();
 this method will return a list of WebElements
@@ -157,17 +162,17 @@ Logic of getting text from 3 different frames
 
 How to handle frames IQ:
 
-"First I will have to identify the frame, once I identify the frame, I will have to switch to the frame by its name or ID, if the name or ID 
-is not provided, I will identify, store it inside web element and switch it perform what ever action i need and i will have to switch it
-to default content"
+"First I will have to identify the frame, once I identify the frame, I will have to switch to the frame by its name or ID, 
+if the name or ID is not provided, I will identify, store it inside web element and switch it perform what ever 
+action i need and i will have to switch it to default content"
 
 How to switch to the main content:
 driver.switchTo().defaultContent();
 
 Handle Multiple Windows:
 
-getWindowHandles(); - gets set of windows ID sessions
-getWindowHandle() - gets 1 window ID session
+getWindowHandles(); - gets set of windows ID sessions 
+getWindowHandle() - gets 1 window ID session currently open by webdriver instance
 
 Logic to handle windows:
 1. identify parent ID
@@ -179,6 +184,8 @@ Logic to handle windows:
 		driver.close();
 		driver.switchTo().window(parent);
 		
+.switchTo();
+helps to switch between windows, frames, and alerts.
 
  
 What is software testing?
@@ -216,4 +223,4 @@ Types of Software Testing
  	Tools Used: Arachni, Iron-Wasp, Graber
  
 
-Document Object Model (DOM): 
+Document Object Model (DOM)

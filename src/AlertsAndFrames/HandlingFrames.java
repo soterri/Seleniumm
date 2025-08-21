@@ -15,12 +15,12 @@ public class HandlingFrames {
 		
 		driver.get("https://demoqa.com/frames");
 		
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		//driver.manage().window().maximize();
-		Thread.sleep(2000);
+		//Thread.sleep(2000);
 		
 		driver.switchTo().frame("frame1");
-		driver.findElement(By.name("firstname")).sendKeys("hello");
+		//driver.findElement(By.name("firstname")).sendKeys("hello");
 		
 		
 		

@@ -12,7 +12,7 @@ public class CheckBoxesDemo extends CommonMethods {
 	
 	public static void main(String[] args) {
 		
-		CommonMethods.setUp("chrome", Constants.GOOGLE_URL);
+		CommonMethods.setUp("chrome", Constants.CHROME_DRIVER_PATH);
 		driver.manage().window().maximize();
 		
 		WebElement loginBtn = driver.findElement(By.xpath("//a[@class='gb_p']"));

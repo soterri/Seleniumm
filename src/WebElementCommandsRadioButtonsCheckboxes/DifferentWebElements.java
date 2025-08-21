@@ -33,15 +33,20 @@ public class DifferentWebElements {
 
 		// to reduce redundancy in coding - as above filling in first name and than
 		// clearing and than sending keys again use code below
-		// driver.findElemeent returns 1 element store inside obj variable - obj
+		// driver.findElement returns 1 element store inside obj variable - obj
 		// variable will be holding firstname txtbox
 		WebElement txFName = driver.findElement(By.id("firstName"));// method returns - returns an element - returns
 																	// webelement
 		WebElement txLastName = driver.findElement(By.id("lastName"));
-		txFName.sendKeys("John");
+		txFName.sendKeys("Sophy");
 		txLastName.sendKeys("Meuan");
 		txFName.clear();
 		txFName.sendKeys("Sav");
+		txFName.clear();
+		txFName.sendKeys("Cameron");
+		txLastName.clear();
+		txLastName.sendKeys("Meu");
+		txFName.clear();
 
 		Thread.sleep(2000);
 
