@@ -224,3 +224,23 @@ Types of Software Testing
  
 
 Document Object Model (DOM)
+
+radio/checkbox:
+	identify the element using any locator
+	check if it's enabled/selected
+	click
+	
+
+radio/checkbox GROUP:
+	-identify group by using common attribute and store inside the list
+	-loop through the list and retrieve value/text of each element
+	using if condition compare if value that we want to select matches
+	the value from element - click -> break
+
+DD with select tag
+	identify element using any locator
+	create an object of select class
+	get all options
+	loop through all options
+	if text is there and matches text that we need to select
+	then will call method .selectByVisibleText();
