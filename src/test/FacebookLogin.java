@@ -12,10 +12,12 @@ public class FacebookLogin extends CommonnMethods{
 	
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
-		
-		driver.get("https://www.facebook.com/r.php?entry_point=login");
+//		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+//		WebDriver driver = new ChromeDriver();
+//		
+//		driver.get("https://www.facebook.com/r.php?entry_point=login");
+//		
+		setUp();
 		
 		WebElement monthDD = driver.findElement(By.id("month")); //object of the DD
 		Select select = new Select(monthDD); //building object of select class

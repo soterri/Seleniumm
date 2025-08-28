@@ -22,7 +22,7 @@ public class PromptAlert {
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
 		//click on prompt button
-		driver.findElement(By.xpath("//button[@id='promtButton']")).click();
+		driver.findElement(By.xpath("//button[@id='promptButton']")).click();
 		
 		//handling prompt alert
 		Alert alert = driver.switchTo().alert();

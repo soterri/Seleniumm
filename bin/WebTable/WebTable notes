@@ -1,0 +1,24 @@
+Webtables is another element in the user interface, it's basically a group
+of object/elements represented in the form of rows and columns.
+
+Table contains ROWS and COLUMNS
+
+1. Static Tables
+2. Dynamic Tables
+
+<table>
+	<thead>
+	
+		<tr>
+			<th>FirstName</th>
+			<th>LastName</th>
+			</tr>
+	</thead> 
+	
+	<tbody>
+		<tr>
+			<td>John</td>
+			<td>Smith</td>
+	</tbody>
+	
+</table>

@@ -4,9 +4,14 @@ import java.util.List;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.NoSuchFrameException;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class CommonnMethods extends BaseClass {
 
@@ -81,6 +86,9 @@ public class CommonnMethods extends BaseClass {
 		}
 	}
 
+	/**
+	 * Methods that accept alerts and catches exceptions if alert not present
+	 */
 	public static void acceptAlert() {
 		try {
 
@@ -103,18 +111,60 @@ public class CommonnMethods extends BaseClass {
 
 		}
 	}
+
 	public static String getAlertText() {
-		
+
 		String alertText = null;
 		try {
 			Alert alert = driver.switchTo().alert();
-			alertText=alert.getText();
-		}catch(NoAlertPresentException e) {
+			alertText = alert.getText();
+		} catch (NoAlertPresentException e) {
 			e.printStackTrace();
-			
+
 		}
 		return alertText;
+
+	}
+
+	public static void switchToFrame(String nameOrId) {
+
+		try {
+			driver.switchTo().frame(nameOrId);
+		} catch (NoSuchFrameException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void switchToFrame(WebElement element) {
+
+		try {
+			driver.switchTo().frame(element);
+		} catch (NoSuchFrameException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public static void switchToFrame(int index) {
+		try {
+			driver.switchTo().frame(index);
+		} catch (NoSuchFrameException e) {
+			e.printStackTrace();
+		}
+	}
+	public static void switchToWindow() {
+		driver.getWindowHandle();
+		
+	}
+	public static WebDriverWait getWaitObject() {
+		WebDriverWait wait = new WebDriverWait(driver, Constants.EXPLICIT_WAIT_TIME);
+		return wait;
+	}
 	
+	public static void waitForClickability(WebElement element) {
+		getWaitObject().until(ExpectedConditions.elementToBeClickable(element));
+	}
+	public static void click(WebElement element) {
+		waitForClickability(element);
+		element.click();
 	}
 }
-

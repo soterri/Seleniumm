@@ -244,3 +244,32 @@ DD with select tag
 	loop through all options
 	if text is there and matches text that we need to select
 	then will call method .selectByVisibleText();
+
+JavaScript alerts or web based pop ups
+	switch to alert
+	accept/dismiss/sendText/getText
+
+Frames:
+	switch to Frame to interact with elements inside the frame
+	otherwise NoSuchElementException will occur
+	
+	How to switch to frame?
+	by name, id, index, webelement in the case of no name or id
+	index should be very last resort
+	
+Windows:
+	getWindowHandles
+	switch focus to another window using unique string ID
+	
+
+Waits:
+Explicit Wait aka WebDriver wait
+Flu
+Why do we need waits? 
+to match the speed of the fast selenium with the speed of the slow application
+to synchronize them selenium provides three explicit waits
+-explicit wait/webdriver wait
+-fluent wait
+explicit wait is applicable to findElement and findElements
+
+WebDriver wait = new WebDriverWait(driver,time);
