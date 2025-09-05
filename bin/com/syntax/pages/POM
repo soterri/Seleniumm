@@ -1,0 +1,6 @@
+Page Object Model POM: a design pattern to create a repository of elements.
+For each page in the application create a java class to store elements of the page
+
+How to implement:
+1. Without page factory
+2. With page factory and @FindBy

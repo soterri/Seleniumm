@@ -1,4 +1,4 @@
-package Calendar;
+package CalendarActionJSS;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -110,7 +110,7 @@ public class DeltaCalendarDemo extends BaseClass {
 
 		// wait for departure month
 		WebDriverWait wait = new WebDriverWait(driver, 5);
-		String departMonth = driver.findElement(By.xpath("//span[@class='dl-datepicker-month-0']")).getText();
+		String departMonth = driver.findElement(By.xpath("//span[@class='dl-datepicker-month-2']")).getText();
 
 		// loop until October appears in departure
 		while (!departMonth.equals("October")) {

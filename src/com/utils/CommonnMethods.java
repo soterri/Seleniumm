@@ -1,13 +1,13 @@
 package com.utils;
 
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.Alert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.UnexpectedTagNameException;
@@ -151,20 +151,75 @@ public class CommonnMethods extends BaseClass {
 			e.printStackTrace();
 		}
 	}
+
+	/**
+	 * method switches focus to child window
+	 */
+	public static void switchToChildWindow() {
+
+		String mainWindow = driver.getWindowHandle();
+		Set<String> windows = driver.getWindowHandles();
+
+		for (String window : windows) {
+
+			if (!window.equals(mainWindow)) {
+				driver.switchTo().window(window);
+				break;
+			}
+		}
+	}
+
 	public static void switchToWindow() {
 		driver.getWindowHandle();
-		
+
 	}
+
 	public static WebDriverWait getWaitObject() {
 		WebDriverWait wait = new WebDriverWait(driver, Constants.EXPLICIT_WAIT_TIME);
 		return wait;
 	}
-	
+
 	public static void waitForClickability(WebElement element) {
 		getWaitObject().until(ExpectedConditions.elementToBeClickable(element));
 	}
+
+	public static WebElement waitForVisibility(WebElement element) {
+		return getWaitObject().until(ExpectedConditions.elementToBeClickable(element));
+	}
+
 	public static void click(WebElement element) {
 		waitForClickability(element);
 		element.click();
 	}
+
+	public static JavascriptExecutor getJSObject() {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		return js;
+	}
+
+	public static void jsClick(WebElement element) {
+		getJSObject().executeScript("arguments[0].click();", element);
+
+	}
+
+	public static void scrollToElement(WebElement element) {
+		getJSObject().executeScript("arguments[0].scrollIntoView(true);", element);
+
+	}
+	public static void scrollDown(int pixel) {
+		getJSObject().executeScript("window.scrollBy(0,"+pixel+")");
+	}
+	public static void scrollUp(int pixel) {
+		getJSObject().executeScript("window.scrollBy(0,-"+pixel+")");	
+	}
+	public static void wait(int second) {
+		try {
+			Thread.sleep(second*1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		
+	}
 }
+
+//implicit wait is a type of wait that works for every command when we use find elements and element 

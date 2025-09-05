@@ -1,0 +1,198 @@
+[1756829566.259][INFO]: Starting ChromeDriver 139.0.7258.68 (40ff94600b6ed9fa7778a3a2566f254ad85f2147-refs/branch-heads/7258@{#2228}) on port 23371
+[1756829566.259][INFO]: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[1756829566.269][INFO]: ChromeDriver was started successfully on port 23371
+[1756829566.711][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [  ],
+            "extensions": [  ]
+         }
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [  ],
+         "extensions": [  ]
+      }
+   }
+}
+[1756829566.712][INFO]: Browser search. Trying... C:\Users\JohnN\eclipse-workspace\SeleniumTest\drivers\chrome.exe
+[1756829566.712][INFO]: Browser search. Trying... C:\Users\JohnN\eclipse-workspace\SeleniumTest\drivers\chrome.exe
+[1756829566.712][INFO]: Browser search. Trying... C:\Users\JohnN\eclipse-workspace\SeleniumTest\drivers\chromium.exe
+[1756829566.716][INFO]: Browser search. Trying... C:\Users\JohnN\AppData\Local\Google\Chrome\Application\chrome.exe
+[1756829566.716][INFO]: Browser search. Trying... C:\Program Files\Google\Chrome\Application\chrome.exe
+[1756829566.716][INFO]: Browser search. Found at  C:\Program Files\Google\Chrome\Application\chrome.exe
+[1756829566.717][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1756829566.717][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1756829566.719][INFO]: ChromeDriver supports communication with Chrome via pipes. This is more reliable and more secure.
+[1756829566.719][INFO]: Use the --remote-debugging-pipe Chrome switch instead of the default --remote-debugging-port to enable this communication mode.
+[1756829566.721][INFO]: Launching chrome: "C:\Program Files\Google\Chrome\Application\chrome.exe" --allow-pre-commit-input --disable-background-networking --disable-backgrounding-occluded-windows --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --enable-automation --enable-logging --log-level=0 --no-first-run --no-service-autorun --password-store=basic --remote-debugging-port=0 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\JohnN\AppData\Local\Temp\scoped_dir9552_1227058330" data:,
+[1756829567.650][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1756829567.666][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] RESPONSE InitSession {
+   "capabilities": {
+      "acceptInsecureCerts": false,
+      "browserName": "chrome",
+      "browserVersion": "139.0.7258.155",
+      "chrome": {
+         "chromedriverVersion": "139.0.7258.68 (40ff94600b6ed9fa7778a3a2566f254ad85f2147-refs/branch-heads/7258@{#2228})",
+         "userDataDir": "C:\\Users\\JohnN\\AppData\\Local\\Temp\\scoped_dir9552_1227058330"
+      },
+      "fedcm:accounts": true,
+      "goog:chromeOptions": {
+         "debuggerAddress": "localhost:61489"
+      },
+      "networkConnectionEnabled": false,
+      "pageLoadStrategy": "normal",
+      "platformName": "windows",
+      "proxy": {
+      },
+      "setWindowRect": true,
+      "strictFileInteractability": false,
+      "timeouts": {
+         "implicit": 0,
+         "pageLoad": 300000,
+         "script": 30000
+      },
+      "unhandledPromptBehavior": "dismiss and notify",
+      "webauthn:extension:credBlob": true,
+      "webauthn:extension:largeBlob": true,
+      "webauthn:extension:minPinLength": true,
+      "webauthn:extension:prf": true,
+      "webauthn:virtualAuthenticators": true
+   },
+   "sessionId": "6e071a1f3c233fc3f23a85b2b72b34b4"
+}
+[1756829568.061][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] COMMAND Navigate {
+   "url": "https://the-internet.herokuapp.com/"
+}
+[1756829568.061][INFO]: Waiting for pending navigations...
+[1756829568.072][INFO]: Done waiting for pending navigations. Status: ok
+[1756829568.252][INFO]: Waiting for pending navigations...
+[1756829569.876][INFO]: Done waiting for pending navigations. Status: ok
+[1756829569.876][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] RESPONSE Navigate
+[1756829569.893][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] COMMAND FindElement {
+   "using": "link text",
+   "value": "File Upload"
+}
+[1756829569.893][INFO]: Waiting for pending navigations...
+[1756829569.895][INFO]: Done waiting for pending navigations. Status: ok
+[1756829569.927][INFO]: Waiting for pending navigations...
+[1756829569.929][INFO]: Done waiting for pending navigations. Status: ok
+[1756829569.929][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.AEE6560D8EC7A9ED227C6DA408C51E2E.d.FAD66238D55527AC8899B5C730A2C615.e.3"
+}
+[1756829569.941][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] COMMAND ClickElement {
+   "id": "f.AEE6560D8EC7A9ED227C6DA408C51E2E.d.FAD66238D55527AC8899B5C730A2C615.e.3"
+}
+[1756829569.941][INFO]: Waiting for pending navigations...
+[1756829569.942][INFO]: Done waiting for pending navigations. Status: ok
+[1756829570.058][INFO]: Waiting for pending navigations...
+[1756829570.261][INFO]: Done waiting for pending navigations. Status: ok
+[1756829570.261][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] RESPONSE ClickElement
+[1756829570.270][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "#file\\-upload"
+}
+[1756829570.270][INFO]: Waiting for pending navigations...
+[1756829570.271][INFO]: Done waiting for pending navigations. Status: ok
+[1756829570.286][INFO]: Waiting for pending navigations...
+[1756829570.287][INFO]: Done waiting for pending navigations. Status: ok
+[1756829570.287][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.AEE6560D8EC7A9ED227C6DA408C51E2E.d.EC605BD9EB5D3C36421A767B6B4C46BB.e.11"
+}
+[1756829570.298][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] COMMAND TypeElement {
+   "id": "f.AEE6560D8EC7A9ED227C6DA408C51E2E.d.EC605BD9EB5D3C36421A767B6B4C46BB.e.11",
+   "text": "C:\\Users\\JohnN\\OneDrive\\Desktop\\File.rtf",
+   "value": [ "C", ":", "\\", "U", "s", "e", "r", "s", "\\", "J", "o", "h", "n", "N", "\\", "O", "n", "e", "D", "r", "i", "v", "e", "\\", "D", "e", "s", "k", "t", "o", "p", "\\", "F", "i", "l", "e", ".", "r", "t", "f" ]
+}
+[1756829570.298][INFO]: Waiting for pending navigations...
+[1756829570.299][INFO]: Done waiting for pending navigations. Status: ok
+[1756829570.344][INFO]: Waiting for pending navigations...
+[1756829570.347][INFO]: Done waiting for pending navigations. Status: ok
+[1756829570.347][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] RESPONSE TypeElement
+[1756829570.357][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] COMMAND FindElement {
+   "using": "css selector",
+   "value": "#file\\-submit"
+}
+[1756829570.357][INFO]: Waiting for pending navigations...
+[1756829570.358][INFO]: Done waiting for pending navigations. Status: ok
+[1756829570.373][INFO]: Waiting for pending navigations...
+[1756829570.374][INFO]: Done waiting for pending navigations. Status: ok
+[1756829570.374][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] RESPONSE FindElement {
+   "element-6066-11e4-a52e-4f735466cecf": "f.AEE6560D8EC7A9ED227C6DA408C51E2E.d.EC605BD9EB5D3C36421A767B6B4C46BB.e.13"
+}
+[1756829570.381][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] COMMAND ClickElement {
+   "id": "f.AEE6560D8EC7A9ED227C6DA408C51E2E.d.EC605BD9EB5D3C36421A767B6B4C46BB.e.13"
+}
+[1756829570.381][INFO]: Waiting for pending navigations...
+[1756829570.384][INFO]: Done waiting for pending navigations. Status: ok
+[1756829570.481][INFO]: Waiting for pending navigations...
+[1756829570.608][INFO]: Done waiting for pending navigations. Status: ok
+[1756829570.608][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] RESPONSE ClickElement
+[1756829570.614][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] COMMAND Quit {
+}
+[1756829570.806][INFO]: [6e071a1f3c233fc3f23a85b2b72b34b4] RESPONSE Quit

@@ -22,3 +22,28 @@ Table contains ROWS and COLUMNS
 	</tbody>
 	
 </table>
+
+How do you handle dynamic webtables?
+
+Scenario 1: 
+- to verify some value is there
+- identify table 
+- get all rows and store in the collection
+- loop through collection of rows
+- get text of each row and use if condition
+- break;
+
+If data is no there in the first page?
+- move to the next page
+
+If you try to click on the element and you cannot perform click
+use JavaScript Executor
+
+How do you get object of JsExecutor?
+By downcasting, downcasting driver
+
+? If you try to click on element and element is not clickable?
+I can use JSExecutor by downcasting my driver.
+JavaScripExecutor js = (JavaScriptExecutor) driver;
+
++ grab the rows again, everything is a unique webelement
